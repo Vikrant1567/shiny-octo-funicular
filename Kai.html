@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For Myy Kai 🖤</title>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+    }
+
+    body{
+      height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      overflow:hidden;
+      color:white;
+
+      background: linear-gradient(-45deg,
+      #1a0933,
+      #5a189a,
+      #7b2cbf,
+      #c77dff);
+
+      background-size:400% 400%;
+      animation:bg 12s ease infinite;
+    }
+
+    @keyframes bg{
+      0%{background-position:0% 50%;}
+      50%{background-position:100% 50%;}
+      100%{background-position:0% 50%;}
+    }
+
+    .container{
+      width:90%;
+      max-width:750px;
+
+      padding:40px;
+
+      border-radius:30px;
+
+      background:rgba(255,255,255,0.1);
+
+      backdrop-filter:blur(12px);
+
+      border:1px solid rgba(255,255,255,0.2);
+
+      box-shadow:0 0 35px rgba(0,0,0,0.4);
+
+      text-align:center;
+
+      z-index:10;
+    }
+
+    .heart{
+      font-size:4rem;
+      animation:pulse 1.2s infinite;
+      margin-bottom:10px;
+    }
+
+    @keyframes pulse{
+      0%{transform:scale(1);}
+      50%{transform:scale(1.2);}
+      100%{transform:scale(1);}
+    }
+
+    h1{
+      font-size:3rem;
+      margin-bottom:20px;
+    }
+
+    p{
+      font-size:1.2rem;
+      line-height:1.8;
+      color:#f5e9ff;
+    }
+
+    button{
+      margin-top:25px;
+
+      padding:14px 28px;
+
+      border:none;
+
+      border-radius:50px;
+
+      background:white;
+
+      color:#7b2cbf;
+
+      font-size:1rem;
+
+      font-weight:bold;
+
+      cursor:pointer;
+
+      transition:0.3s;
+    }
+
+    button:hover{
+      transform:scale(1.08);
+      background:#ffe9ff;
+    }
+
+    .message{
+      display:none;
+      margin-top:25px;
+      font-size:1.1rem;
+      color:#fff0ff;
+    }
+
+    .gallery{
+      display:flex;
+      justify-content:center;
+      gap:15px;
+      margin-top:30px;
+      flex-wrap:wrap;
+    }
+
+    .gallery img{
+      width:140px;
+      height:140px;
+
+      object-fit:cover;
+
+      border-radius:20px;
+
+      border:3px solid rgba(255,255,255,0.5);
+
+      transition:0.4s;
+
+      box-shadow:0 0 20px rgba(255,255,255,0.2);
+    }
+
+    .gallery img:hover{
+      transform:scale(1.08);
+    }
+
+    .hearts span{
+      position:absolute;
+      bottom:-100px;
+      color:rgba(255,255,255,0.3);
+
+      animation:float 10s linear infinite;
+
+      font-size:20px;
+    }
+
+    .hearts span:nth-child(1){left:10%; animation-delay:0s;}
+    .hearts span:nth-child(2){left:25%; animation-delay:2s;}
+    .hearts span:nth-child(3){left:40%; animation-delay:4s;}
+    .hearts span:nth-child(4){left:60%; animation-delay:1s;}
+    .hearts span:nth-child(5){left:75%; animation-delay:5s;}
+    .hearts span:nth-child(6){left:90%; animation-delay:3s;}
+
+    @keyframes float{
+      0%{
+        transform:translateY(0) scale(0);
+        opacity:0;
+      }
+
+      50%{
+        opacity:1;
+      }
+
+      100%{
+        transform:translateY(-120vh) scale(1.5);
+        opacity:0;
+      }
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <audio autoplay loop>
+    <source src="My Band.mp3" type="audio/mpeg">
+  </audio>
+
+  <div class="hearts">
+    <span>❤</span>
+    <span>❤</span>
+    <span>❤</span>
+    <span>❤</span>
+    <span>❤</span>
+    <span>❤</span>
+  </div>
+
+  <div class="container">
+
+    <div class="heart">🖤</div>
+
+    <h1>Hey Kai 👉👈</h1>
+
+    <p>
+      Just wanted to make something special for you :P<br><br>
+
+      You make ordinary moments feel unforgettable.<br>
+      Everytime I text you, I JUST SMILEEEEEE.<br>
+      Falling in love with you everyday XDDD 🖤
+    </p>
+
+    <button onclick="showMessage()">
+      Click Me ✨
+    </button>
+
+    <div class="message" id="message">
+      No matter how busy life gets,<br>
+      babe you’ll always be the most important to me 🖤✨
+    </div>
+
+    <div class="gallery">
+      <img src="Kai1.jpg">
+      <img src="Kai2.jpg">
+      <img src="Kai3.jpg">
+    </div>
+
+  </div>
+
+  <script>
+
+    function showMessage(){
+      document.getElementById("message").style.display="block";
+    }
+
+  </script>
+
+</body>
+</html>
